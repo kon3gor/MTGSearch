@@ -1,4 +1,4 @@
-module github.com/ko3gor/MTGSearch
+module github.com/kon3gor/MTGSearch
 
 go 1.19
 

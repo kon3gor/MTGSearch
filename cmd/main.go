@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	mtgsearch "github.com/ko3gor/MTGSearch"
+	mtgsearch "github.com/kon3gor/MTGSearch"
 )
 
 func main() {
@@ -17,10 +17,12 @@ func main() {
 	for _, c := range res.Cards {
 		fmt.Println(c.Name)
 	}
-	for col.HasMore() {
+	var i int
+	for col.HasMore() && i < 2 {
 		res = col.NextPage()
 		for _, c := range res.Cards {
 			fmt.Println(c.Name)
 		}
+		i++
 	}
 }

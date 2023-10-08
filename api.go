@@ -45,7 +45,7 @@ func (cc *CardsCollector) HasMore() bool {
 }
 
 func (cc *CardsCollector) fetch(q cardsQuery, page int) CardsCollection {
-	cards, remains := fetchCards(cc.query, page)
+	cards, remains := fetchCards(q, page)
 	cc.page = page
 	cc.remains = remains
 	cc.query = q

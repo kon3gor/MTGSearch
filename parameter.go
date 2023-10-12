@@ -9,6 +9,7 @@ type parameter interface {
 	pipe(o parameter) parameter
 	combine(o parameter) parameter
 	String() string
+	EncodeValues(key string, v *url.Values) error
 }
 
 type combination struct {
@@ -16,7 +17,10 @@ type combination struct {
 }
 
 func (c combination) EncodeValues(key string, v *url.Values) error {
-	v.Set(key, c.String())
+	s := c.String()
+	if len(s) > 0 {
+		v.Set(key, s)
+	}
 	return nil
 }
 
@@ -69,7 +73,10 @@ type pype struct {
 }
 
 func (p pype) EncodeValues(key string, v *url.Values) error {
-	v.Set(key, p.String())
+	s := p.String()
+	if len(s) > 0 {
+		v.Set(key, s)
+	}
 	return nil
 }
 
@@ -141,7 +148,6 @@ type empty struct{}
 var emptyParameter = empty{}
 
 func (e empty) EncodeValues(key string, v *url.Values) error {
-	v.Set(key, e.String())
 	return nil
 }
 
@@ -162,7 +168,10 @@ type value struct {
 }
 
 func (vl value) EncodeValues(key string, v *url.Values) error {
-	v.Set(key, vl.String())
+	s := vl.String()
+	if len(s) > 0 {
+		v.Set(key, s)
+	}
 	return nil
 }
 

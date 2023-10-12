@@ -20,7 +20,7 @@ func buildQuery(expr []string) cardsQuery {
 			stack = append(stack, q1.pipe(q2))
 		default:
 			k, v := parseKeyValue(token)
-			q := simpleQuery(k, v)
+			q := simpleCardsQuery(k, v)
 			stack = append(stack, q)
 		}
 	}

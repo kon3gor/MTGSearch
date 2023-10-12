@@ -104,7 +104,6 @@ func tokenize(expr string) []string {
 			buf.WriteRune(c)
 		case quote:
 			hasOpenQuote = !hasOpenQuote
-			buf.WriteRune(c)
 		case cor, newl:
 			break
 		default:

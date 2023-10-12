@@ -5,16 +5,6 @@ import (
 )
 
 const (
-	// keys
-	cmc       = "cmc"
-	oracle    = "oracle"
-	tipe      = "type"
-	subtype   = "subType"
-	supertype = "superType"
-	rarity    = "rarity"
-	color     = "color"
-
-	// operators
 	and = "and"
 	or  = "or"
 )

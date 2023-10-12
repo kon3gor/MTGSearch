@@ -1,0 +1,77 @@
+ [
+    {
+        "url": "name"
+    },
+    {
+        "url": "layout"
+    },
+    {
+        "url": "cmc",
+        "type": "string"
+    },
+    {
+        "url": "colors",
+        "code": "color"
+    },
+    {
+        "url": "colorIdentity"
+    },
+    {
+        "url": "type",
+        "code": "fullType"
+    },
+    {
+        "url": "supertypes",
+        "code": "supertype"
+    },
+    {
+        "url": "types",
+        "code": "tipe",
+		"expr": "type"
+    },
+    {
+        "url": "subtypes",
+        "code": "subType"
+    },
+    {
+        "url": "rarity"
+    },
+    {
+        "url": "set",
+		"code": "setCode"
+    },
+    {
+        "url": "setName"
+    },
+    {
+        "url": "text",
+		"code": "oracle"
+    },
+    {
+        "url": "flavor"
+    },
+    {
+        "url": "artist"
+    },
+    {
+        "url": "number"
+    },
+    {
+        "url": "power"
+    },
+    {
+        "url": "toughness"
+    },
+    {
+        "url": "loyalty"
+    },
+    {
+        "url": "language"
+    },
+    {
+        "url": "gameFormat"
+    },
+    {
+        "url": "legality"
+    }
+]

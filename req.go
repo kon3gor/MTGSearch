@@ -17,7 +17,6 @@ const (
 func fetchCards(q cardsQuery, page int) (CardsCollection, int) {
 	qs, _ := query.Values(q)
 	reqUrl := fmt.Sprintf("%s?%s&page=%d", apiUrl, qs.Encode(), page)
-	fmt.Println(reqUrl)
 
 	res, err := http.Get(reqUrl)
 	if err != nil {
